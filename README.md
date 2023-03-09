@@ -1,4 +1,3 @@
-![0e89880cec925365ab6c3170b605f86265490ee7485c5290d285f13bbeafc5aa](https://user-images.githubusercontent.com/98175896/224166149-aa6e2395-2e9e-4e03-a346-19aa7272255a.jpg)
 # ProLang 
 CS 3342 Programming Languages 
 
