@@ -1,0 +1,144 @@
+CS 3342 – Homework #1  
+Due Date: September 18, 2022 (Sunday) - 11:59pm 
+
+Part A:  Regular Expression – with Java  
+You can use IntelliJ\Eclipse\VS Code for this homework.  If you forget how to write a Java 
+program, you can Google it or watch Some useful YouTube videos like the following: 
+https://www.youtube.com/watch?v=nwicobFbC2E  
+https://www.youtube.com/watch?v=cejX8YuCfNw  
+Part A1: 
+Run the following Java code snippet. Take a screen shot of the output and copy it to a Word 
+doc.  
+ 
+Part A2: 
+Replace the character (#) with a RegEx metacharacter or quantifier in the Java code snippet 
+below to make the Boolean output to be ‘true’.  Take a screenshot of your code snippet and 
+the output and copy them to a Word doc. 
+ 
+ 
+ 
+ 
+ 
+Note: you may need to import some Java classes highlighted below to your Java program: 
+package com.proglang; 
+import java.util.regex.Matcher; 
+import java.util.regex.Pattern; 
+public class hw1 { 
+ public static void main(String[] args) { 
+  //Part A: 
+  System.out.println("Match 1: " + Pattern.matches("[789][0-9]{9}", 
+"99530389490")); 
+  ........... 
+  ........... 
+ } 
+} 
+ 
+ 
+*Note – your task:  Submit the Word doc and the source code separately to Canvas.  You can 
+zip the source code but do not zip the Word doc.   (Name your word doc - 
+‘HW1_partA_your_name.docx’.) 
+ 
+ 
+Part B:  Regular Expression – with Python 
+ 
+You can run Python in Visual Studio Code or other IDEs/IDLEs you like.   
+Steps to run Python in Visual Studio Code: 
+ 
+1.  Install VS Code on Windows/Mac:  
+(Download Visual Studio Code - Mac, Linux, Windows ) 
+ 
+Some useful YouTube videos: 
+(For Mac: https://www.youtube.com/watch?v=bJaBHGKHv9A&t=0s ) 
+(For windows: https://www.youtube.com/watch?v=MlIzFUI1QGA ) 
+ 
+2.  Install Python on Windows/Mac and VS Code: 
+2.1:  Download Python from this site and install it in your computer: 
+  https://www.python.org/downloads/ 
+ 
+Some useful YouTube videos: 
+(Mac: https://www.youtube.com/watch?v=M323OL6K5vs – Install Python on Mac/VS Code) 
+ (Windows: https://www.youtube.com/watch?v=82le04m6Hhs&t=0s – Install Python on Windows) 
+ (Windows: https://www.youtube.com/watch?v=AKVRkB0fot0 – Install Python on VS Code) 
+ 
+ 
+Intro to Python: 
+https://developers.google.com/edu/python/introduction 
+ 
+Regular Expression in Python: 
+https://developers.google.com/edu/python/regular-expressions 
+ 
+Note: Raw String Notation: 
+https://www.tutorialspoint.com/What-is-Raw-String-Notation-in-Python-regular-expression 
+ 
+ 
+Part B task: Replace the character (#) in the following Python code snippet to make the code 
+work as described in their corresponding print statements.   Take a screenshot of your code 
+snippet and the output and copy them to a Word doc.   
+ 
+#Regular Expression  
+#Sample RE Python code  
+import re 
+def text_match(text): 
+        patterns = r'ab\w+' 
+        if re.search(patterns,  text): 
+                return (patterns, text, 'Found a match!') 
+        else: 
+                return (patterns, text, 'Not matched!') 
+ 
+print("Text1:", text_match("Cats are smarter than dogs")) 
+print("Text2:", text_match("abc")) 
+ 
+# The following is the code to modify. 
+# Open file (please download the sample input file from Canvas.) 
+f = open('D:\\test1.txt', 'r') 
+data=f.read() 
+strings = re.findall("mask.", data) 
+#case sensitive 
+print ("Search1: mask or masks", strings)   
+strings = re.findall(r'##for###', data) 
+print ("Search2: words start with 'for': ", strings) 
+strings = re.findall(r'###ies\b', data) 
+print ("Search3: words end with 'ies': ", strings) 
+strings = re.findall(r'#########', data) 
+print ("Search4: words begin with 'i' and end with 't': ", strings) 
+ 
+Sample output for replacing ‘#” in findall: 
+Text1: ('ab\\w+', 'Cats are smarter than dogs', 'Not matched!') 
+Text2: ('ab\\w+', 'abc', 'Found a match!') 
+Search1: mask or masks ['masks', 'mask ', 'mask ', 'mask ', 'mask '] 
+Search2: words start with 'for':  ['forward', 'for', 'for', 'for'] 
+Search3: words end with 'ies':  ['activities', 'authorities'] 
+Search4: words begin with 'i' and end with 't':  ['it', 'important', 'input'] 
+ 
+Notes: 
+Search1: mask or masks ['masks', 'mask ', 'mask ', 'mask ', 'mask '] 
+Search2: words start with 'for':  ['forward', 'for', 'for', 'for'] 
+Search3: words end with 'ies':  ['activities', 'authorities'] 
+Search4: words begin with 'i' and end with 't':  ['it', 'important', 'input'] 
+ 
+*Submit the Word doc and the source code separately to Canvas. (Name your word doc - 
+‘HW1_partB_your_name.docx’.) 
+ 
+ 
+The following is the content of the input file (test1.txt): 
+SMU looks forward to welcoming students, faculty and staff for the upcoming fall academic 
+semester next month. Preparations continue for a safe return to regular operations, in-person 
+instruction and full campus activities. However, it is important to balance the desire to 
+embrace a traditional college setting with the need to maintain healthy behaviors to keep the 
+virus spread under control.   
+ 
+Faculty may require masks 
+ 
+Masks will not be required at SMU for fall 2021, with a few exceptions. Individuals will 
+continue to have the option to wear a mask anywhere and at any time on campus if they 
+choose. 
+ 
+After reviewing the latest guidance from federal, state and local health authorities, as well as 
+input from the University’s Emergency Operations Center, SMU’s Faculty Senate Executive 
+Committee and the President’s Executive Council, SMU will allow faculty members to seek an 
+exception to the campus no-mask policy in their classrooms through a process that includes 
+advance notice to their department chairs, deans and the provost’s office. Instructors must 
+clearly define their classroom mask requirements and how they will be enforced in the course 
+syllabuses prior to the start of classes. The provost’s office will provide more details on the 
+classroom mask exception in the coming weeks. 
+ 
